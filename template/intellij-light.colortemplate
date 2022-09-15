@@ -1,0 +1,351 @@
+; vim: ft=colortemplate fdm=marker cc=30,48,66,84,102 et ts=2 sw=2
+
+; Information {{{
+; Mandatory
+Full name:     IntelliJ Light Theme
+Short name:    intellij_light
+Author:        Gilbert Francois Duivesteijn
+; Optional
+Maintainer:    Gilbert Francois Duivesteijn
+Website:       https://www.blitzblit.com
+Description:   A colorschema inspired by the beautiful IntelliJ Light theme.
+License:       Apache License 2.0
+Neovim:        yes
+; Prefix for options: short name is used if this key is not present:
+Option Prefix: light
+; }}}
+
+; Documentation {{{
+; Include: _help.colortemplate
+; }}}
+
+; Common linked groups {{{
+; Other conventional group names (see `:help group-name`)
+; }}}
+
+; Color palette {{{
+; Color name                 GUI                     Base256     Base16 (optional)
+; xterm colors
+Color: black                 #000000        ~         Black
+Color: darkred               #800000        ~         DarkRed
+Color: darkgreen             #008000        ~         DarkGreen
+Color: darkyellow            #808000        ~         DarkYellow
+Color: darkblue              #000080        ~         DarkBlue
+Color: darkmagenta           rgb(128,   0, 128)        ~         DarkMagenta
+Color: darkcyan              rgb(  0, 128, 128)        ~         DarkCyan
+Color: lightgrey             rgb(192, 192, 192)        ~         LightGrey
+Color: darkgrey              rgb(128, 128, 128)        ~         DarkGrey
+Color: lightred              rgb(255,   0,   0)        ~         LightRed
+Color: lightgreen            rgb(  0, 255,   0)        ~         LightGreen
+Color: lightyellow           rgb(255, 255,   0)        ~         LightYellow
+Color: lightblue             rgb(  0,   0, 255)        ~         LightBlue
+Color: lightmagenta          rgb(255,   0, 255)        ~         LightMagenta
+Color: lightcyan             rgb(  0, 255, 255)        ~         LightCyan
+Color: white                 rgb(255, 255, 255)        ~         White
+
+; Intellij colors
+Color: darkorange            #804000                   ~         DarkRed
+Color: lightorange           #FF8000                   ~         LightRed
+Color: orange2               #FF7F00                   ~         LightRed
+Color: blue4                 #0000B2                  19         DarkBlue          ; python decorator
+Color: purple3               #660099                  54         DarkMagenta       ; python param
+Color: purple4               #94558D                  96         DarkMagenta       ; python self
+Color: purple5               #660E7A                  54         DarkMagenta       ; python constant 
+
+; UI colors
+Color: cursor_fg             #FFFFFF                 231         White
+Color: cursor_bg             #000000                  16         Black
+Color: cursorline            #FFFAE3                 230         LightYellow       ; cursorline
+Color: cursorcolumn          #E4E4FF                 189         LightBlue         ; highlight variables, don't use cursor column
+Color: colorcolumn           #EEEEEE                 255         LightGrey
+Color: cursorlinenr_fg       #A0A0A0                 247         DarkGrey
+Color: linenr_fg             #C0C0C0                 250         LightGrey
+Color: linenr_bg             #FFFFFF                 231         White
+Color: popupmenu_fg          #444444                 238         Black
+Color: popupmenu_bg          #D0D0D0                 252         LightGrey
+Color: normal_nc_bg          #EEEEEE                 255         LightGrey
+Color: normal_float_bg       #DDDDDD                 253         LightGrey
+Color: search_fg             #444444                 238         Black 
+Color: search_bg             #FFFF5F                 227         LightYellow
+Color: nontext_fg            #FFAA00                 214         DarkGrey
+Color: vertsplit_fg          #808080                 244         DarkGrey
+Color: vertsplit_bg          #FFFFFF                 231         White
+Color: statusline_fg         #E4E4E4                 254         White
+Color: statusline_bg         #005F87                  24         Black
+Color: statusline_nc_fg      #444444                 238         White
+Color: statusline_nc_bg      #D0D0D0                 252         DarkGrey
+Color: todo_fg               #00AF5F                  35         LightYellow
+Color: todo_bg               #EEEEEE                 255         Black
+Color: error_fg              #AF0000                 124         LightRed
+Color: error_bg              #FFD7FF                 225         LightGrey
+Color: matchparen_bg         #99CCFF                 153         DarkGrey
+Color: matchparen_fg         #005F87                  24         Black
+Color: visual_fg             #EEEEEE                 255         White
+Color: visual_bg             #0087AF                  31         Blue
+Color: folded_fg             #0087AF                  31         Black
+Color: folded_bg             #AFD7FF                 153         LightGrey
+Color: wildmenu_fg           #444444                 238         Black
+Color: wildmenu_bg           #D0D0D0                 226         LightGrey
+Color: spellbad              #FFAFD7                 218         LightMagenta
+Color: spellcap              #FFFFAF                 229         LightBlue
+Color: spellrare             #AFFF87                 156         LightGreen
+Color: spelllocal            #D7D7FF                 189         LightBlue
+Color: diffadd_fg            #008700                  28         Black
+Color: diffadd_bg            #AFFFAF                 157         DarkGreen
+Color: diffdelete_fg         #AF0000                 124         Black
+Color: diffdelete_bg         #FFD7FF                 225         DarkRed
+Color: difftext_fg           #0087AF                  31         Black
+Color: difftext_bg           #FFFFD7                 230         DarkYellow
+Color: diffchange_fg         #444444                 238         Black
+Color: diffchange_bg         #FFD787                 222         LightYellow
+Color: tabline_bg            #005F87                  24         Black
+Color: tabline_active_fg     #444444                 238         LightGrey
+Color: tabline_active_bg     #E4E4E4                 254         Black
+Color: tabline_inactive_fg   #EEEEEE                 255         Black
+Color: tabline_inactive_bg   #0087AF                  31         DarkMagenta
+
+Color: lsp_verror_fg         #FCA4A7                   ~         LightRed
+Color: lsp_vwarning_fg       #F7E79F                   ~         LightYellow
+Color: lsp_vinfo_fg          #C4DBFA                   ~         LightBlue
+Color: lsp_vhint_fg          #B5E7BE                   ~         LightGreen
+
+Color: lsp_error_fg          #CE0505                   ~         DarkRed
+; Color: buftabline_bg         #005F87         ~
+; Color: buftabline_current_fg #444444        ~
+; Color: buftabline_current_bg #E4E4E4        ~
+; Color: buftabline_active_fg  #EEEEEE        ~
+; Color: buftabline_active_bg  #005FAF         ~
+; Color: buftabline_inactive_fg #EEEEEE        ~
+; Color: buftabline_inactive_bg #0087AF         ~
+
+; Color: diffins               #BEE6BE                   ~         DarkGreen
+; Color: diffdel               #C8C8C8                   ~         DarkGrey
+; Color: diffcon               #FFD5CC                   ~         DarkRed
+; Color: diffcha               #CAD9FA                   ~         DarkBlue
+; Color: diffwar               #FFCE9D                   ~         LightYellow
+
+; Color: guigrey1              rgb(221, 221, 221)      253         DarkGrey
+; Color: guigrey2              rgb(236, 236, 236)      254         LightGrey
+; Color: guigrey3              rgb(242, 242, 242)      255         LightGrey
+; Color: guipmenusel           rgb( 69, 119, 227)        ~         LightBlue
+; Color: guivisual             rgb( 89, 116, 171)        ~         LightBlue
+
+; Color: cocerror              rgb(220,   0,   0)        ~         DarkRed
+; Color: cocwarn               rgb(220, 110,   0)        ~         LightRed
+; Color: cocinfo               rgb(220, 220,   0)        ~         DarkYellow
+; Color: cochint               rgb(  0, 110, 220)        ~         LightBlue
+
+; Color: tmpfg                 rgb(255,   0, 255)        ~         DarkMagenta
+; Color: tmpbg                 rgb(  0,  64,   0)        ~         DarkGreen
+
+; }}}
+
+; Terminal colors {{{
+Term colors:    black  darkred  darkgreen   darkyellow  darkblue  darkmagenta  darkcyan lightgrey 
+Term colors: darkgrey lightred lightgreen lightyellow lightblue lightmagenta lightcyan     white
+; }}}
+
+; UI groups {{{
+Variant: gui
+#if get(g:, '@optionprefix_transp_bg', 0) && !has('gui_running')
+Variant: 256 8
+#if get(g:, '@optionprefix_transp_bg', 0)
+Variant: gui 256 8
+    Normal                   black             none
+    Terminal                 black             none
+#else
+    Normal                   black             white
+    Terminal                 black             white
+#endif
+
+Background: light
+
+LineNr		                   linenr_fg         none
+LineNrAbove                  linenr_fg         none
+LineNrBelow                  linenr_fg         none
+CursorLineNr	               cursorlinenr_fg   cursorline
+
+NonText	                     black             none
+Conceal		                   linenr_fg         none
+VertSplit	                   vertsplit_fg      none
+Folded		                   folded_fg         folded_bg
+FoldColumn                   folded_fg         white
+SignColumn	                 darkgreen         none
+ColorColumn                  fg                colorcolumn
+EndOfBuffer                  black             none
+
+Cursor		                   black             white             reverse
+CursorIM                     black             white	           reverse
+CursorLine	                 none              cursorline
+CursorColumn	               none              cursorcolumn
+
+SpecialKey	                 darkmagenta       none
+
+Directory	                   darkblue          none
+
+DiffAdd		                   diffadd_fg        diffadd_bg
+DiffChange	                 diffchange_fg     diffchange_bg
+DiffDelete	                 diffdelete_fg     diffdelete_bg
+DiffText                     difftext_fg       difftext_bg
+
+TermCursor	                 -> Cursor
+TermCursorNC                 -> CursorIM
+
+MatchParen	                 none              matchparen_bg
+ModeMsg		                   darkyellow        none
+MoreMsg		                   darkyellow        none
+Question	                   darkyellow        none
+WarningMsg                   darkmagenta       none
+ErrorMsg	                   error_fg          error_bg
+
+NormalFloat	                 fg                normal_float_bg 
+NormalNC	                   fg                normal_nc_bg
+Pmenu	                       popupmenu_fg      popupmenu_bg 
+PmenuSel	                   popupmenu_fg      popupmenu_bg      reverse
+; PmenuSbar	           none              guigrey2
+; PmenuThumb	         none              guigrey1
+; QuickFixLine	       
+Search	                     search_fg         search_bg
+IncSearch	                   -> Search
+SpellBad                     lightmagenta      none              s=darkgrey t=underline g=undercurl
+SpellCap                     lightmagenta      none              s=darkgrey t=underline g=undercurl
+SpellLocal                   lightmagenta      none              s=darkgrey t=underline g=undercurl
+SpellRare                    lightmagenta      none              s=darkgrey t=underline g=undercurl
+StatusLine	                 statusline_fg     statusline_bg     bold
+StatusLineNC	               statusline_nc_fg  statusline_nc_bg  bold
+
+TabLine		                   tabline_inactive_fg tabline_inactive_bg
+TabLineFill		               tabline_inactive_fg tabline_inactive_bg
+TabLineSel	                 tabline_active_fg tabline_active_bg
+Title		                     lightgrey         none
+Visual		                   visual_fg         visual_bg
+VisualNOS	                   visual_fg         darkgrey
+; Whitespace	         black             none
+WildMenu	                   wildmenu_fg       wildmenu_bg       bold
+
+; }}}
+
+; Default code highlight groups {{{
+
+Comment                      lightgrey         none              italic            ; any comment
+Constant                     purple3           none              bold,italic       ; any constant
+String                       darkgreen         none                                ; a string constant
+Character                    darkblue          none              bold              ; a character constant: c, \n
+Number                       lightblue         none                                ; a number constant: 234, 0xff
+Boolean                      darkblue          none              bold              ; a boolean constant: TRUE, false
+Float                        darkblue          none                                ; a floating point constant: 2.3e10
+
+Identifier                   black             none                                ; any variable name
+Function                     black             none                                ; a function name (also: methods for classes)
+
+Statement                    darkblue          none              bold              ; any statement
+Conditional                  darkblue          none              bold              ; if, then, else, endif, switch, etc.
+Repeat                       darkblue          none              bold              ; for, do, while, etc.
+Label                        darkblue          none              bold              ; case, default, etc.
+Operator                     black             none                                ; sizeof, +, *, etc.
+Keyword                      darkblue          none              bold              ; any other keyword 
+Exception                    darkblue          none              bold              ; try, catch, throw
+
+PreProc                      darkgrey          none                                ; generic Preprocessor
+Include                      darkblue          none              bold
+Define                       darkgrey          none                                ; preprocessor #define
+Macro                        darkgrey          none                                ; same as Define
+PreCondit                    darkgrey          none                                ; preprocessor #if, #else, #endif, etc.
+
+Type                         black             none
+StorageClass                 black             none
+Structure                    black             none
+Typedef                      black             none
+
+Special                      black             none                                ; any special symbol
+SpecialChar                  black             none                                ; special character in a constant
+Tag                          black             none                                ; you can use CTRL- on this
+Delimiter                    black             none                                ; character that needs attention
+SpecialComment               black             none                                ; special things inside a comment
+Debug                        black             none                                ; debugging statements
+
+Underlined                   none              none              underline
+
+Error                        lightred          none              underline
+Todo                         black             lightyellow
+; }}}
+
+; Python {{{
+pythonString                 darkcyan          none              bold
+pythonClassVar               darkmagenta       none
+; pythonBuiltin
+; pythonBuiltinFunc
+; pythonBuiltinObj
+; pythonCustomFunc
+pythonDecorator              purple3           none
+pythonInclude                darkblue          none              bold
+; pythonInstances
+; pythonStatement
+; pythonConditional
+; pythonRepeat
+pythonOperator               darkblue          none              bold
+pythonException              darkblue          none
+; pythonBuiltinConstant
+pythonBoolean                darkblue          none              bold
+pythonAttribute              purple3           none
+; pythonQuotes
+; docstring
+pythonComment        -> Comment
+; }}}
+
+; CoC {{{
+CocErrorFloat                darkred           none
+CocWarningFloat              darkorange        none
+CocInfoFloat                 darkblue          none
+CocHintFloat                 darkgreen         none
+
+CocErrorSign                 darkred           none
+CocWarningSign               darkorange        none
+CocInfoSign                  darkblue          none
+CocHintSign                  darkgreen         none
+
+; CocErrorVirtualText  white             black               s=lightred t=underline g=undercurl
+; CocWarningVirtualText white            black               s=orange2 t=underline g=undercurl
+; CocInfoVirtualText	 white             black               s=lightgreen t=underline g=undercurl 
+; CocHintVirtualText	 white             black               s=lightblue t=underline g=undercurl 
+; CocErrorHighlight		 white             black			
+
+; }}}
+
+; Neovim language server {{{
+LspDiagnosticsDefaultError                     darkred           none
+LspDiagnosticsDefaultWarning                   darkyellow        none
+LspDiagnosticsDefaultInformation               darkblue          none
+LspDiagnosticsDefaultHint                      darkgreen         none
+LspDiagnosticsUnderlineError                   black             none              t=underline g=undercurl 
+LspDiagnosticsUnderlineWarning                 black             none              t=underline g=undercurl  
+LspDiagnosticsUnderlineInformation             black             none              t=underline g=undercurl  
+LspDiagnosticsUnderlineHint                    black             none              t=underline g=undercurl  
+LspDiagnosticsVirtualTextError                 lsp_verror_fg     none
+LspDiagnosticsVirtualTextWarning               lsp_vwarning_fg   none
+LspDiagnosticsVirtualTextInformation           lsp_vinfo_fg      none
+LspDiagnosticsVirtualTextHint                  lsp_vhint_fg      none
+
+; }}}
+
+; Additional highlight groups {{{
+; Add additional highlight groups here if you want
+; }}}
+
+; NERDTree {{{
+; NERDTreeUp
+; NERDTreeHelpCommand
+; NERDTreeHelpTitle
+; NERDTreeHelpKey
+; NERDTreeHelp
+NERDTreeToggleOff          darkred           none
+NERDTreeToggleOn           darkgreen         none
+NERDTreeDir                darkblue          none              bold
+NERDTreeDirSlash           white             none
+NERDTreeFile               black             none
+NERDTreeExecFile           darkgreen         none
+; NERDTreeOpenable 
+; NERDTreeClosable
+; B/W variant {{{
+; Include: _bw.colortemplate
+;}}}
