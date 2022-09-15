@@ -35,7 +35,7 @@ if &background == "light"
   highlight SpellCap     ctermfg=8    ctermbg=7
   highlight StatusLine   ctermfg=0    ctermbg=7    cterm=bold
   highlight StatusLineNC ctermfg=8    ctermbg=7    cterm=NONE
-  highlight VertSplit    ctermfg=8    ctermbg=7    cterm=NONE
+  highlight VertSplit    ctermfg=8    ctermbg=NONE    cterm=NONE
   " highlight SignColumn                ctermbg=7
 else
   highlight LineNr       ctermfg=8
@@ -49,7 +49,7 @@ else
   highlight SpellCap     ctermfg=7    ctermbg=8
   highlight StatusLine   ctermfg=15   ctermbg=8    cterm=bold
   highlight StatusLineNC ctermfg=7    ctermbg=8    cterm=NONE
-  highlight VertSplit    ctermfg=7    ctermbg=8    cterm=NONE
+  highlight VertSplit    ctermfg=7    ctermbg=NONE    cterm=NONE
   " highlight SignColumn                ctermbg=8
 endif
 
