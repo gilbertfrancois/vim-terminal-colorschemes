@@ -142,7 +142,7 @@ else
   highlight FoldColumn   ctermfg=7    ctermbg=8
   highlight Folded       ctermfg=7    ctermbg=8
   highlight LineNr       ctermfg=8
-  highlight Normal       ctermfg=15
+  highlight Normal       ctermfg=7
   highlight NonText      ctermfg=8
   highlight Pmenu        ctermfg=15   ctermbg=8
   highlight PmenuSel     ctermfg=8    ctermbg=15
