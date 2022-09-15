@@ -24,35 +24,35 @@ highlight Search         ctermfg=0    ctermbg=11
 " Dim line numbers, comments, color columns, the status line, splits and sign
 " columns.
 if &background == "light"
-  highlight LineNr       ctermfg=7
-  highlight CursorLineNr ctermfg=8
-  highlight Comment      ctermfg=7
   highlight ColorColumn  ctermfg=8    ctermbg=7
-  highlight Folded       ctermfg=8    ctermbg=7
+  highlight Comment      ctermfg=7
+  highlight CursorLineNr ctermfg=8
+  highlight Directory    ctermfg=4
   highlight FoldColumn   ctermfg=8    ctermbg=7
+  highlight Folded       ctermfg=8    ctermbg=7
+  highlight LineNr       ctermfg=7
   highlight Pmenu        ctermfg=0    ctermbg=7
   highlight PmenuSel     ctermfg=7    ctermbg=0
-  highlight SpellCap     ctermfg=8    ctermbg=7
-  highlight StatusLine   ctermfg=0    ctermbg=7    cterm=bold
-  highlight StatusLineNC ctermfg=8    ctermbg=7    cterm=NONE
-  highlight VertSplit    ctermfg=8    ctermbg=NONE    cterm=NONE
   highlight SignColumn                ctermbg=NONE
-  highlight Directory    ctermfg=
+  highlight SpellCap     ctermfg=8    ctermbg=7
+  highlight StatusLine   ctermfg=0    ctermbg=7       cterm=bold
+  highlight StatusLineNC ctermfg=8    ctermbg=7       cterm=NONE
+  highlight VertSplit    ctermfg=8    ctermbg=NONE    cterm=NONE
 else
-  highlight LineNr       ctermfg=8
-  highlight CursorLineNr ctermfg=7
-  highlight Comment      ctermfg=8
   highlight ColorColumn  ctermfg=7    ctermbg=8
-  highlight Folded       ctermfg=7    ctermbg=8
+  highlight Comment      ctermfg=8
+  highlight CursorLineNr ctermfg=7
+  highlight Directory    ctermfg=12
   highlight FoldColumn   ctermfg=7    ctermbg=8
+  highlight Folded       ctermfg=7    ctermbg=8
+  highlight LineNr       ctermfg=8
   highlight Pmenu        ctermfg=15   ctermbg=8
   highlight PmenuSel     ctermfg=8    ctermbg=15
-  highlight SpellCap     ctermfg=7    ctermbg=8
-  highlight StatusLine   ctermfg=15   ctermbg=8    cterm=bold
-  highlight StatusLineNC ctermfg=7    ctermbg=8    cterm=NONE
-  highlight VertSplit    ctermfg=7    ctermbg=NONE    cterm=NONE
   highlight SignColumn                ctermbg=NONE
-  highlight Directory    ctermfg=12
+  highlight SpellCap     ctermfg=7    ctermbg=8
+  highlight StatusLine   ctermfg=15   ctermbg=8       cterm=bold
+  highlight StatusLineNC ctermfg=7    ctermbg=8       cterm=NONE
+  highlight VertSplit    ctermfg=7    ctermbg=NONE    cterm=NONE
 endif
 
 highlight link DimFzfFg     Normal
