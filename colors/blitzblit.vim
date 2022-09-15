@@ -88,27 +88,12 @@ highlight DiffAdd            ctermfg=0           ctermbg=10
 highlight DiffChange         ctermfg=0           ctermbg=11
 highlight DiffDelete         ctermfg=0           ctermbg=9
 highlight DiffText           ctermfg=0           ctermbg=11          cterm=bold
-
-" highlight DiffAdd        ctermfg=0    ctermbg=2
-" highlight DiffChange     ctermfg=0    ctermbg=3
-" highlight DiffDelete     ctermfg=0    ctermbg=1
-" highlight DiffText       ctermfg=0    ctermbg=11   cterm=bold
-
 highlight ErrorMsg           ctermfg=1
 
-
-"ErrorMsg, { "fg": s:red }) " error messages on the command line
-"VertSplit, { "fg": s:vertsplit }) " the column separating vertically split windows
-"Folded, { "fg": s:comment_grey }) " line used for closed folds
-"FoldColumn, {}) " 'foldcolumn'
-"SignColumn, {}) " column where signs are displayed
-"IncSearch, { "fg": s:yellow, "bg": s:comment_grey }) " 'incsearch' highlighting; also used for the text replaced with ":s///c"
-"LineNr, { "fg": s:gutter_fg_grey }) " Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
-"CursorLineNr, {}) " Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
-"MatchParen, { "fg": s:blue, "gui": "underline", "cterm": "underline" }) " The character under the cursor or just before it, if it is a paired bracket, and its match.
-"ModeMsg, {}) " 'showmode' message (e.g., "-- INSERT --")
-""
-"MoreMsg, {}) " more-prompt
+highlight IncSearch          ctermfg=11          ctermbg=8
+highlight MatchParen         ctermfg=4                               cterm=underline
+highlight NonText            ctermfg=8
+highlight Normal
 "NonText, { "fg": s:special_grey }) " '~' and '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line).
 "Normal, { "fg": s:foreground, "bg": s:background }) " normal text
 "PmenuSbar, { "bg": s:cursor_grey }) " Popup menu: scrollbar.
@@ -159,6 +144,7 @@ if &background == "light"
   highlight FoldColumn   ctermfg=8    ctermbg=7
   highlight Folded       ctermfg=8    ctermbg=7
   highlight LineNr       ctermfg=7
+  highlight Normal       ctermfg=0
   highlight Pmenu        ctermfg=0    ctermbg=7
   highlight PmenuSel     ctermfg=7    ctermbg=0
   highlight SignColumn                ctermbg=NONE
@@ -174,6 +160,7 @@ else
   highlight FoldColumn   ctermfg=7    ctermbg=8
   highlight Folded       ctermfg=7    ctermbg=8
   highlight LineNr       ctermfg=8
+  highlight Normal       ctermfg=15
   highlight Pmenu        ctermfg=15   ctermbg=8
   highlight PmenuSel     ctermfg=8    ctermbg=15
   highlight SignColumn                ctermbg=NONE
