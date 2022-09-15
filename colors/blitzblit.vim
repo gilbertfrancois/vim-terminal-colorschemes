@@ -92,50 +92,30 @@ highlight ErrorMsg           ctermfg=1
 
 highlight IncSearch          ctermfg=11          ctermbg=8
 highlight MatchParen         ctermfg=4                               cterm=underline
-highlight NonText            ctermfg=8
-highlight Normal
-"NonText, { "fg": s:special_grey }) " '~' and '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line).
-"Normal, { "fg": s:foreground, "bg": s:background }) " normal text
-"PmenuSbar, { "bg": s:cursor_grey }) " Popup menu: scrollbar.
-"PmenuThumb, { "bg": s:white }) " Popup menu: Thumb of the scrollbar.
-"Question, { "fg": s:purple }) " hit-enter prompt and yes/no questions
-"QuickFixLine, { "fg": s:black, "bg": s:yellow }) " Current quickfix item in the quickfix window.
-"Search, { "fg": s:black, "bg": s:yellow }) " Last search pattern highlighting (see 'hlsearch'). Also used for similar items that need to stand out.
-"SpecialKey, { "fg": s:special_grey }) " Meta and special keys listed with ":map", also for text used to show unprintable characters in the text, 'listchars'. Generally: text that is displayed differently from what it really is.
-"SpellBad, { "fg": s:red, "gui": "underline", "cterm": "underline" }) " Word that is not recognized by the spellchecker. This will be combined with the highlighting used otherwise.
-""SpellCap", { "fg": s:dark_yellow }) " Word that should start with a capital. This will be combined with the highlighting used otherwise.
-""SpellLocal", { "fg": s:dark_yellow }) " Word that is recognized by the spellchecker as one that is used in another region. This will be combined with the highlighting used otherwise.
-""SpellRare", { "fg": s:dark_yellow }) " Word that is recognized by the spellchecker as one that is hardly ever used. spell This will be combined with the highlighting used otherwise.
-""StatusLine", { "fg": s:white, "bg": s:cursor_grey }) " status line of current window
-""StatusLineNC", { "fg": s:comment_grey }) " status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
-""StatusLineTerm", { "fg": s:white, "bg": s:cursor_grey }) " status line of current :terminal window
-""StatusLineTermNC", { "fg": s:comment_grey }) " status line of non-current :terminal window
-""TabLine", { "fg": s:comment_grey }) " tab pages line, not active tab page label
-""TabLineFill", {}) " tab pages line, where there are no labels
-""TabLineSel", { "fg": s:white }) " tab pages line, active tab page label
-""Terminal", { "fg": s:white, "bg": s:black }) " terminal window (see terminal-size-color)
-""Title", { "fg": s:green }) " titles for output from ":set all", ":autocmd" etc.
-""Visual", { "bg": s:visual_grey }) " Visual mode selection
-""VisualNOS", { "bg": s:visual_grey }) " Visual mode selection when vim is "Not Owning the Selection". Only X11 Gui's gui-x11 and xterm-clipboard supports this.
-""WarningMsg", { "fg": s:yellow }) " warning messages
-""WildMenu", { "fg": s:black, "bg": s:blue }) " current match in 'wildmenu' completion
+highlight Question           ctermfg=13
+highlight QuickFixLine       ctermfg=0           ctermbg=11
+" highlight Search         ctermfg=0    ctermbg=11
+highlight Search             ctermfg=0           ctermbg=11
+highlight SpecialKey         ctermfg=8           
+highlight SpellBad           ctermfg=9                               cterm=underline
+highlight SpellCap           ctermfg=3
+highlight SpellLocal         ctermfg=3
+highlight SpellRare          ctermfg=3
 
+highlight TabLine            ctermfg=0           ctermbg=7           cterm=underline 
+highlight TabLineFill                                                cterm=reverse
+highlight TabLineSel                                                 cterm=bold
+highlight Title              ctermfg=10
+" highlight Visual         ctermfg=NONE ctermbg=NONE cterm=inverse
+highlight Visual                                 ctermbg=8
+highlight VisualNOS                              ctermbg=8
+highlight WarningMsg         ctermfg=11
+highlight WildMenu           ctermfg=0           ctermbg=12
 
+" TODO
+" PmenuSbar
+" PmenuThumb
 
-
-
-
-" In diffs, added lines are green, changed lines are yellow, deleted lines are
-" red, and changed text (within a changed line) is bright yellow and bold.
-
-" Invert selected lines in visual mode
-highlight Visual         ctermfg=NONE ctermbg=NONE cterm=inverse
-
-" Highlight search matches in black, with a yellow background
-highlight Search         ctermfg=0    ctermbg=11
-
-" Dim line numbers, comments, color columns, the status line, splits and sign
-" columns.
 if &background == "light"
   highlight ColorColumn  ctermfg=8    ctermbg=7
   highlight Comment      ctermfg=7
@@ -145,12 +125,14 @@ if &background == "light"
   highlight Folded       ctermfg=8    ctermbg=7
   highlight LineNr       ctermfg=7
   highlight Normal       ctermfg=0
+  highlight NonText      ctermfg=7
   highlight Pmenu        ctermfg=0    ctermbg=7
   highlight PmenuSel     ctermfg=7    ctermbg=0
   highlight SignColumn                ctermbg=NONE
-  highlight SpellCap     ctermfg=8    ctermbg=7
   highlight StatusLine   ctermfg=0    ctermbg=7       cterm=bold
   highlight StatusLineNC ctermfg=8    ctermbg=7       cterm=NONE
+  highlight StatusLineTerm   ctermfg=0           ctermbg=7           cterm=bold
+  highlight StatusLineTermNC ctermfg=8           ctermbg=7           cterm=NONE
   highlight VertSplit    ctermfg=8    ctermbg=NONE    cterm=NONE
 else
   highlight ColorColumn  ctermfg=7    ctermbg=8
@@ -161,12 +143,14 @@ else
   highlight Folded       ctermfg=7    ctermbg=8
   highlight LineNr       ctermfg=8
   highlight Normal       ctermfg=15
+  highlight NonText      ctermfg=8
   highlight Pmenu        ctermfg=15   ctermbg=8
   highlight PmenuSel     ctermfg=8    ctermbg=15
   highlight SignColumn                ctermbg=NONE
-  highlight SpellCap     ctermfg=7    ctermbg=8
   highlight StatusLine   ctermfg=15   ctermbg=8       cterm=bold
   highlight StatusLineNC ctermfg=7    ctermbg=8       cterm=NONE
+  highlight StatusLineTerm   ctermfg=15          ctermbg=8           cterm=bold
+  highlight StatusLineTermNC ctermfg=8
   highlight VertSplit    ctermfg=7    ctermbg=NONE    cterm=NONE
 endif
 
