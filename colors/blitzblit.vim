@@ -78,12 +78,14 @@ highlight SpecialComment     ctermfg=8
 highlight Debug              ctermfg=NONE
 highlight Underlined                                                 cterm=underline
 " highlight Ignore
-highlight Error              ctermfg=9
+" highlight Error              ctermfg=9
+highlight Error              ctermfg=15          ctermbg=9
 highlight Todo               ctermfg=13
 
 highlight Cursor             ctermfg=0           ctermbg=12
 highlight TermCursor                                                 cterm=reverse
 highlight CursorLine                                                 cterm=underline
+" highlight CursorLine                             ctermbg=8
 highlight DiffAdd            ctermfg=0           ctermbg=10
 highlight DiffChange         ctermfg=0           ctermbg=11
 highlight DiffDelete         ctermfg=0           ctermbg=9
@@ -117,54 +119,54 @@ highlight WildMenu           ctermfg=0           ctermbg=12
 " PmenuThumb
 
 if &background == "light"
-  highlight ColorColumn  ctermfg=8    ctermbg=7
-  highlight Comment      ctermfg=7
-  highlight CursorLineNr ctermfg=8
-  highlight Directory    ctermfg=4
-  highlight FoldColumn   ctermfg=8    ctermbg=7
-  highlight Folded       ctermfg=8    ctermbg=7
-  highlight LineNr       ctermfg=7
-  highlight Normal       ctermfg=0
-  highlight NonText      ctermfg=7
-  highlight Pmenu        ctermfg=0    ctermbg=7
-  highlight PmenuSel     ctermfg=7    ctermbg=0
-  highlight SignColumn                ctermbg=NONE
-  highlight StatusLine   ctermfg=0    ctermbg=7       cterm=bold
-  highlight StatusLineNC ctermfg=8    ctermbg=7       cterm=NONE
+  highlight ColorColumn      ctermfg=8           ctermbg=7
+  highlight Comment          ctermfg=7
+  highlight CursorLineNr     ctermfg=8
+  highlight Directory        ctermfg=4
+  highlight FoldColumn       ctermfg=8           ctermbg=7
+  highlight Folded           ctermfg=8           ctermbg=7
+  highlight LineNr           ctermfg=7
+  highlight Normal           ctermfg=0
+  highlight NonText          ctermfg=7
+  highlight Pmenu            ctermfg=0           ctermbg=7
+  highlight PmenuSel         ctermfg=7           ctermbg=0
+  highlight SignColumn                           ctermbg=NONE
+  highlight StatusLine       ctermfg=0           ctermbg=7           cterm=bold
+  highlight StatusLineNC     ctermfg=8           ctermbg=7           cterm=NONE
   highlight StatusLineTerm   ctermfg=0           ctermbg=7           cterm=bold
   highlight StatusLineTermNC ctermfg=8           ctermbg=7           cterm=NONE
-  highlight VertSplit    ctermfg=8    ctermbg=NONE    cterm=NONE
+  highlight VertSplit        ctermfg=8           ctermbg=NONE        cterm=NONE
 else
-  highlight ColorColumn  ctermfg=7    ctermbg=8
-  highlight Comment      ctermfg=8
-  highlight CursorLineNr ctermfg=7
-  highlight Directory    ctermfg=12
-  highlight FoldColumn   ctermfg=7    ctermbg=8
-  highlight Folded       ctermfg=7    ctermbg=8
-  highlight LineNr       ctermfg=8
-  highlight Normal       ctermfg=7
-  highlight NonText      ctermfg=8
-  highlight Pmenu        ctermfg=15   ctermbg=8
-  highlight PmenuSel     ctermfg=8    ctermbg=15
-  highlight SignColumn                ctermbg=NONE
-  highlight StatusLine   ctermfg=15   ctermbg=8       cterm=bold
-  highlight StatusLineNC ctermfg=7    ctermbg=8       cterm=NONE
+  highlight ColorColumn      ctermfg=7           ctermbg=8
+  highlight Comment          ctermfg=8
+  highlight CursorLineNr     ctermfg=7
+  highlight Directory        ctermfg=12
+  highlight FoldColumn       ctermfg=7           ctermbg=8
+  highlight Folded           ctermfg=7           ctermbg=8
+  highlight LineNr           ctermfg=8
+  highlight Normal           ctermfg=7
+  highlight NonText          ctermfg=8
+  highlight Pmenu            ctermfg=15          ctermbg=8
+  highlight PmenuSel         ctermfg=8           ctermbg=15
+  highlight SignColumn                           ctermbg=NONE
+  highlight StatusLine       ctermfg=15          ctermbg=8           cterm=bold
+  highlight StatusLineNC     ctermfg=7           ctermbg=8           cterm=NONE
   highlight StatusLineTerm   ctermfg=15          ctermbg=8           cterm=bold
   highlight StatusLineTermNC ctermfg=8
-  highlight VertSplit    ctermfg=7    ctermbg=NONE    cterm=NONE
+  highlight VertSplit        ctermfg=7           ctermbg=NONE        cterm=NONE
 endif
 
 " airblade/vim-gitgutter
-highlight GitGutterAdd      ctermfg=10
-highlight GitGutterChange   ctermfg=11
-highlight GitGutterDelete   ctermfg=9
+highlight GitGutterAdd       ctermfg=10
+highlight GitGutterChange    ctermfg=11
+highlight GitGutterDelete    ctermfg=9
 
 " lewis6991/gitsigns.nvim
-hi link GitSignsAdd    GitGutterAdd
-hi link GitSignsChange GitGutterChange
-hi link GitSignsDelete GitGutterDelete
+hi link GitSignsAdd          GitGutterAdd
+hi link GitSignsChange       GitGutterChange
+hi link GitSignsDelete       GitGutterDelete
 
 " mhinz/vim-signify
-hi link SignifySignAdd    GitGutterAdd
-hi link SignifySignChange GitGutterChange
-hi link SignifySignDelete GitGutterDelete
+hi link SignifySignAdd       GitGutterAdd
+hi link SignifySignChange    GitGutterChange
+hi link SignifySignDelete    GitGutterDelete
