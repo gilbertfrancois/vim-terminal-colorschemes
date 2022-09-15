@@ -78,8 +78,7 @@ highlight SpecialComment     ctermfg=8
 highlight Debug              ctermfg=NONE
 highlight Underlined                                                 cterm=underline
 " highlight Ignore
-" highlight Error              ctermfg=9
-highlight Error              ctermfg=15          ctermbg=9
+highlight Error              ctermfg=15          ctermbg=1
 highlight Todo               ctermfg=13
 
 highlight Cursor             ctermfg=0           ctermbg=12
@@ -90,7 +89,8 @@ highlight DiffAdd            ctermfg=0           ctermbg=10
 highlight DiffChange         ctermfg=0           ctermbg=11
 highlight DiffDelete         ctermfg=0           ctermbg=9
 highlight DiffText           ctermfg=0           ctermbg=11          cterm=bold
-highlight ErrorMsg           ctermfg=1
+highlight ErrorMsg           ctermfg=1           ctermbg=NONE
+
 
 highlight IncSearch          ctermfg=11          ctermbg=8
 highlight MatchParen         ctermfg=4                               cterm=underline
@@ -111,7 +111,7 @@ highlight Title              ctermfg=10
 " highlight Visual         ctermfg=NONE ctermbg=NONE cterm=inverse
 highlight Visual                                 ctermbg=8
 highlight VisualNOS                              ctermbg=8
-highlight WarningMsg         ctermfg=11
+highlight WarningMsg         ctermfg=11          ctermbg=NONE
 highlight WildMenu           ctermfg=0           ctermbg=12
 
 " TODO
@@ -170,3 +170,13 @@ hi link GitSignsDelete       GitGutterDelete
 hi link SignifySignAdd       GitGutterAdd
 hi link SignifySignChange    GitGutterChange
 hi link SignifySignDelete    GitGutterDelete
+
+
+highlight DiagnosticError    ctermfg=1
+highlight DiagnosticWarn     ctermfg=3
+highlight DiagnosticInfo     ctermfg=4
+highlight DiagnosticHint     ctermfg=6
+highlight DiagnosticUnderlineError   ctermfg=1           cterm=underline
+highlight DiagnosticUnderlineWarn    ctermfg=3           cterm=underline
+highlight DiagnosticUnderlineInfo    ctermfg=4           cterm=underline
+highlight DiagnosticUnderlineHint    ctermfg=6           cterm=underline
