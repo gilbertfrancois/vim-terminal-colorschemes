@@ -14,6 +14,7 @@ if exists("syntax_on")
 endif
 
 let colors_name = "blitzblit-dark"
+let s:red=1
 
 highlight Comment            ctermfg=8
 highlight Constant           ctermfg=14
@@ -60,7 +61,7 @@ highlight DiffAdd            ctermfg=0           ctermbg=10
 highlight DiffChange         ctermfg=0           ctermbg=11
 highlight DiffDelete         ctermfg=0           ctermbg=9
 highlight DiffText           ctermfg=0           ctermbg=11          cterm=bold
-highlight ErrorMsg           ctermfg=1           ctermbg=NONE
+highlight ErrorMsg           ctermfg=s:red       ctermbg=NONE
 
 
 highlight IncSearch          ctermfg=11          ctermbg=8
