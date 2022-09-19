@@ -158,14 +158,14 @@ hi link SignifySignChange    GitGutterChange
 hi link SignifySignDelete    GitGutterDelete
 
 
-call SetColor('DiagnosticError',            s:l_red,    s:none,     s:none)
+call SetColor('DiagnosticError',            s:d_red,    s:none,     s:none)
 call SetColor('DiagnosticWarn',             s:d_yellow, s:none,     s:none)
 call SetColor('DiagnosticInfo',             s:d_blue,   s:none,     s:none)
 call SetColor('DiagnosticHint',             s:d_cyan,   s:none,     s:none)
-call SetColor('DiagnosticUnderlineError',   s:d_red,    s:none,     s:underline)
-call SetColor('DiagnosticUnderlineWarn',    s:d_yellow, s:none,     s:underline)
-call SetColor('DiagnosticUnderlineInfo',    s:d_blue,   s:none,     s:underline)
-call SetColor('DiagnosticUnderlineHint',    s:d_cyan,   s:none,     s:underline)
+call SetColor('DiagnosticUnderlineError',   s:l_red,    s:none,     s:underline)
+call SetColor('DiagnosticUnderlineWarn',    s:l_yellow, s:none,     s:underline)
+call SetColor('DiagnosticUnderlineInfo',    s:l_blue,   s:none,     s:underline)
+call SetColor('DiagnosticUnderlineHint',    s:l_cyan,   s:none,     s:underline)
 
 " Must appear at the end of the file to work around this oddity:
 " https://groups.google.com/forum/#!msg/vim_dev/afPqwAFNdrU/nqh6tOM87QUJ
