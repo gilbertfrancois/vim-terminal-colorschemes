@@ -14,124 +14,139 @@ if exists("syntax_on")
 endif
 
 let colors_name = "blitzblit-dark"
-let s:red=1
+let s:black=0
+let s:d_red=1
+let s:d_green=2
+let s:d_yellow=3
+let s:d_blue=4
+let s:d_purple=5
+let s:d_cyan=6
+let s:silver=7
+let s:gray=8
+let s:l_red=9
+let s:l_green=10
+let s:l_yellow=11
+let s:l_blue=12
+let s:l_purple=13
+let s:l_cyan=14
+let s:white=15
 
-highlight Comment            ctermfg=8
-highlight Constant           ctermfg=14
-highlight String             ctermfg=10
-highlight Character          ctermfg=10
-highlight Number             ctermfg=3
-highlight Boolean            ctermfg=3
-highlight Float              ctermfg=3
-highlight Identifier         ctermfg=9
-highlight Function           ctermfg=12
-highlight Statement          ctermfg=13
+highlight Comment            ctermfg=s:gray
+highlight Constant           ctermfg=s:l_cyan
+highlight String             ctermfg=s:l_green
+highlight Character          ctermfg=s:l_green
+highlight Number             ctermfg=s:d_yellow
+highlight Boolean            ctermfg=s:d_yellow
+highlight Float              ctermfg=s:d_yellow
+highlight Identifier         ctermfg=s:l_red
+highlight Function           ctermfg=s:l_blue
+highlight Statement          ctermfg=s:l_purple
  
-highlight Conditional        ctermfg=13
-highlight Repeat             ctermfg=13
-highlight Label              ctermfg=13
-highlight Operator           ctermfg=13
-highlight Keyword            ctermfg=9
-highlight Exception          ctermfg=13
-highlight PreProc            ctermfg=11
-highlight Include            ctermfg=12
-highlight Define             ctermfg=13
-highlight Macro              ctermfg=13
-highlight PreCondit          ctermfg=11
-highlight Type               ctermfg=11
-highlight StorageClass       ctermfg=11
-highlight Structure          ctermfg=11
-highlight Typedef            ctermfg=11
-highlight Special            ctermfg=12
-highlight SpecialChar        ctermfg=3
+highlight Conditional        ctermfg=s:l_purple
+highlight Repeat             ctermfg=s:l_purple
+highlight Label              ctermfg=s:l_purple
+highlight Operator           ctermfg=s:l_purple
+highlight Keyword            ctermfg=s:l_red
+highlight Exception          ctermfg=s:l_purple
+highlight PreProc            ctermfg=s:l_yellow
+highlight Include            ctermfg=s:l_blue
+highlight Define             ctermfg=s:l_purple
+highlight Macro              ctermfg=s:l_purple
+highlight PreCondit          ctermfg=s:l_yellow
+highlight Type               ctermfg=s:l_yellow
+highlight StorageClass       ctermfg=s:l_yellow
+highlight Structure          ctermfg=s:l_yellow
+highlight Typedef            ctermfg=s:l_yellow
+highlight Special            ctermfg=s:l_blue
+highlight SpecialChar        ctermfg=s:d_yellow
 highlight Tag                ctermfg=NONE
 highlight Delimiter          ctermfg=NONE
-highlight SpecialComment     ctermfg=8
+highlight SpecialComment     ctermfg=s:gray
 highlight Debug              ctermfg=NONE
 highlight Underlined                                                 cterm=underline
 " highlight Ignore
-highlight Error              ctermfg=15          ctermbg=1
-highlight Todo               ctermfg=13
+highlight Error              ctermfg=s:white          ctermbg=s:red
+highlight Todo               ctermfg=s:l_purple
 
-highlight Cursor             ctermfg=0           ctermbg=12
+highlight Cursor             ctermfg=s:black           ctermbg=s:l_blue
 highlight TermCursor                                                 cterm=reverse
 highlight CursorLine                                                 cterm=underline
-" highlight CursorLine                             ctermbg=8
-highlight DiffAdd            ctermfg=0           ctermbg=10
-highlight DiffChange         ctermfg=0           ctermbg=11
-highlight DiffDelete         ctermfg=0           ctermbg=9
-highlight DiffText           ctermfg=0           ctermbg=11          cterm=bold
-highlight ErrorMsg           ctermfg=s:red       ctermbg=NONE
+" highlight CursorLine                             ctermbg=s:gray
+highlight DiffAdd            ctermfg=s:black           ctermbg=s:l_green
+highlight DiffChange         ctermfg=s:black           ctermbg=s:l_yellow
+highlight DiffDelete         ctermfg=s:black           ctermbg=s:l_red
+highlight DiffText           ctermfg=s:black           ctermbg=s:l_yellow          cterm=bold
+highlight ErrorMsg           ctermfg=s:d_red       ctermbg=NONE
 
 
-highlight IncSearch          ctermfg=11          ctermbg=8
-highlight MatchParen         ctermfg=4                               cterm=underline
-highlight Question           ctermfg=13
-highlight QuickFixLine       ctermfg=0           ctermbg=11
-" highlight Search         ctermfg=0    ctermbg=11
-highlight Search             ctermfg=0           ctermbg=11
-highlight SpecialKey         ctermfg=8           
-highlight SpellBad           ctermfg=9                               cterm=underline
-highlight SpellCap           ctermfg=3
-highlight SpellLocal         ctermfg=3
-highlight SpellRare          ctermfg=3
+highlight IncSearch          ctermfg=s:l_yellow          ctermbg=s:gray
+highlight MatchParen         ctermfg=s:d_blue                              cterm=underline
+highlight Question           ctermfg=s:l_purple
+highlight QuickFixLine       ctermfg=s:black           ctermbg=s:l_yellow
+" highlight Search         ctermfg=s:black    ctermbg=s:l_yellow
+highlight Search             ctermfg=s:black           ctermbg=s:l_yellow
+highlight SpecialKey         ctermfg=s:gray          
+highlight SpellBad           ctermfg=s:l_red                              cterm=underline
+highlight SpellCap           ctermfg=s:d_yellow
+highlight SpellLocal         ctermfg=s:d_yellow
+highlight SpellRare          ctermfg=s:d_yellow
 
-highlight TabLine            ctermfg=0           ctermbg=7           cterm=underline 
+highlight TabLine            ctermfg=s:black           ctermbg=s:silver          cterm=underline 
 highlight TabLineFill                                                cterm=reverse
 highlight TabLineSel                                                 cterm=bold
-highlight Title              ctermfg=10
+highlight Title              ctermfg=s:l_green
 " highlight Visual         ctermfg=NONE ctermbg=NONE cterm=inverse
-highlight Visual                                 ctermbg=8
-highlight VisualNOS                              ctermbg=8
-highlight WarningMsg         ctermfg=11          ctermbg=NONE
-highlight WildMenu           ctermfg=0           ctermbg=12
+highlight Visual                                 ctermbg=s:gray
+highlight VisualNOS                              ctermbg=s:gray
+highlight WarningMsg         ctermfg=s:l_yellow          ctermbg=NONE
+highlight WildMenu           ctermfg=s:black           ctermbg=s:l_blue
 
 " TODO
 " PmenuSbar
 " PmenuThumb
 
 if &background == "light"
-  highlight ColorColumn      ctermfg=8           ctermbg=7
-  highlight Comment          ctermfg=7
-  highlight CursorLineNr     ctermfg=8
-  highlight Directory        ctermfg=4
-  highlight FoldColumn       ctermfg=8           ctermbg=7
-  highlight Folded           ctermfg=8           ctermbg=7
-  highlight LineNr           ctermfg=7
-  highlight Normal           ctermfg=0
-  highlight NonText          ctermfg=7
-  highlight Pmenu            ctermfg=0           ctermbg=7
-  highlight PmenuSel         ctermfg=7           ctermbg=0
+  highlight ColorColumn      ctermfg=s:gray          ctermbg=s:silver
+  highlight Comment          ctermfg=s:silver
+  highlight CursorLineNr     ctermfg=s:gray
+  highlight Directory        ctermfg=s:d_blue
+  highlight FoldColumn       ctermfg=s:gray          ctermbg=s:silver
+  highlight Folded           ctermfg=s:gray          ctermbg=s:silver
+  highlight LineNr           ctermfg=s:silver
+  highlight Normal           ctermfg=s:black
+  highlight NonText          ctermfg=s:silver
+  highlight Pmenu            ctermfg=s:black           ctermbg=s:silver
+  highlight PmenuSel         ctermfg=s:silver          ctermbg=s:black
   highlight SignColumn                           ctermbg=NONE
-  highlight StatusLine       ctermfg=0           ctermbg=7           cterm=bold
-  highlight StatusLineNC     ctermfg=8           ctermbg=7           cterm=NONE
-  highlight StatusLineTerm   ctermfg=0           ctermbg=7           cterm=bold
-  highlight StatusLineTermNC ctermfg=8           ctermbg=7           cterm=NONE
-  highlight VertSplit        ctermfg=8           ctermbg=NONE        cterm=NONE
+  highlight StatusLine       ctermfg=s:black           ctermbg=s:silver          cterm=bold
+  highlight StatusLineNC     ctermfg=s:gray          ctermbg=s:silver          cterm=NONE
+  highlight StatusLineTerm   ctermfg=s:black           ctermbg=s:silver          cterm=bold
+  highlight StatusLineTermNC ctermfg=s:gray          ctermbg=s:silver          cterm=NONE
+  highlight VertSplit        ctermfg=s:gray          ctermbg=NONE        cterm=NONE
 else
-  highlight ColorColumn      ctermfg=7           ctermbg=8
-  highlight Comment          ctermfg=8
-  highlight CursorLineNr     ctermfg=7
-  highlight Directory        ctermfg=12
-  highlight FoldColumn       ctermfg=7           ctermbg=8
-  highlight Folded           ctermfg=7           ctermbg=8
-  highlight LineNr           ctermfg=8
-  highlight Normal           ctermfg=7
-  highlight NonText          ctermfg=8
-  highlight Pmenu            ctermfg=15          ctermbg=8
-  highlight PmenuSel         ctermfg=8           ctermbg=15
+  highlight ColorColumn      ctermfg=s:silver          ctermbg=s:gray
+  highlight Comment          ctermfg=s:gray
+  highlight CursorLineNr     ctermfg=s:silver
+  highlight Directory        ctermfg=s:l_blue
+  highlight FoldColumn       ctermfg=s:silver          ctermbg=s:gray
+  highlight Folded           ctermfg=s:silver          ctermbg=s:gray
+  highlight LineNr           ctermfg=s:gray
+  highlight Normal           ctermfg=s:silver
+  highlight NonText          ctermfg=s:gray
+  highlight Pmenu            ctermfg=s:white          ctermbg=s:gray
+  highlight PmenuSel         ctermfg=s:gray          ctermbg=s:white
   highlight SignColumn                           ctermbg=NONE
-  highlight StatusLine       ctermfg=15          ctermbg=8           cterm=bold
-  highlight StatusLineNC     ctermfg=7           ctermbg=8           cterm=NONE
-  highlight StatusLineTerm   ctermfg=15          ctermbg=8           cterm=bold
-  highlight StatusLineTermNC ctermfg=8
-  highlight VertSplit        ctermfg=7           ctermbg=NONE        cterm=NONE
+  highlight StatusLine       ctermfg=s:white          ctermbg=s:gray          cterm=bold
+  highlight StatusLineNC     ctermfg=s:silver          ctermbg=s:gray          cterm=NONE
+  highlight StatusLineTerm   ctermfg=s:white          ctermbg=s:gray          cterm=bold
+  highlight StatusLineTermNC ctermfg=s:gray
+  highlight VertSplit        ctermfg=s:silver          ctermbg=NONE        cterm=NONE
 endif
 
 " airblade/vim-gitgutter
-highlight GitGutterAdd       ctermfg=10
-highlight GitGutterChange    ctermfg=11
-highlight GitGutterDelete    ctermfg=9
+highlight GitGutterAdd       ctermfg=s:l_green
+highlight GitGutterChange    ctermfg=s:l_yellow
+highlight GitGutterDelete    ctermfg=s:l_red
 
 " lewis6991/gitsigns.nvim
 hi link GitSignsAdd          GitGutterAdd
@@ -144,14 +159,14 @@ hi link SignifySignChange    GitGutterChange
 hi link SignifySignDelete    GitGutterDelete
 
 
-highlight DiagnosticError    ctermfg=1
-highlight DiagnosticWarn     ctermfg=3
-highlight DiagnosticInfo     ctermfg=4
-highlight DiagnosticHint     ctermfg=6
-highlight DiagnosticUnderlineError   ctermfg=1           cterm=underline
-highlight DiagnosticUnderlineWarn    ctermfg=3           cterm=underline
-highlight DiagnosticUnderlineInfo    ctermfg=4           cterm=underline
-highlight DiagnosticUnderlineHint    ctermfg=6           cterm=underline
+highlight DiagnosticError    ctermfg=s:red
+highlight DiagnosticWarn     ctermfg=s:d_yellow
+highlight DiagnosticInfo     ctermfg=s:d_blue
+highlight DiagnosticHint     ctermfg=s:d_cyan
+highlight DiagnosticUnderlineError   ctermfg=s:d_red          cterm=underline
+highlight DiagnosticUnderlineWarn    ctermfg=s:d_yellow          cterm=underline
+highlight DiagnosticUnderlineInfo    ctermfg=s:d_blue          cterm=underline
+highlight DiagnosticUnderlineHint    ctermfg=s:d_cyan          cterm=underline
 
 " Must appear at the end of the file to work around this oddity:
 " https://groups.google.com/forum/#!msg/vim_dev/afPqwAFNdrU/nqh6tOM87QUJ
