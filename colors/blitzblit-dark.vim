@@ -14,30 +14,52 @@ if exists("syntax_on")
 endif
 
 let colors_name = "blitzblit-dark"
-let s:black = 0
-let s:d_red = 1
-let s:d_green = 2
-let s:d_yellow = 3
-let s:d_blue=4
-let s:d_purple=5
-let s:d_cyan=6
-let s:silver=7
-let s:gray=8
-let s:l_red=9
-let s:l_green=10
-let s:l_yellow=11
-let s:l_blue=12
-let s:l_purple=13
-let s:l_cyan=14
-let s:white=15
 
-highlight Comment            ctermfg=gray
-highlight Constant           ctermfg=l_cyan
-highlight String             ctermfg=l_green
-highlight Character          ctermfg=l_green
-highlight Number             ctermfg=d_yellow
-highlight Boolean            ctermfg=d_yellow
-highlight Float              ctermfg=d_yellow
+let s:black =      {'cterm': 0}
+let s:d_red =      {'cterm': 1}
+let s:d_green =    {'cterm': 2}
+let s:d_yellow =   {'cterm': 3}
+let s:d_blue =     {'cterm': 4}
+let s:d_purple =   {'cterm': 5}
+let s:d_cyan =     {'cterm': 6}
+let s:silver =     {'cterm': 7}
+let s:gray =       {'cterm': 8}
+let s:l_red =      {'cterm': 9}
+let s:l_green =    {'cterm': 10}
+let s:l_yellow =   {'cterm': 11}
+let s:l_blue =     {'cterm': 12}
+let s:l_purple =   {'cterm': 13}
+let s:l_cyan =     {'cterm': 14}
+let s:white =      {'cterm': 15}
+let s:none =       {'cterm': NONE}
+
+" ============================================================================== 
+" =   set colour function
+" ============================================================================== 
+function SetColor(group, colorfg, colorbg, special) 
+    let histring  = 'hi ' . a:group 
+    let histring .= ' ctermfg=' . a:colorfg.cterm
+    let histring .= ' ctermbg=' . a:colorbg.cterm
+    let histring .= ' cterm=' . a:special.cterm
+    execute histring
+endfunction
+
+
+call SetColor('Comment',        s:gray,     s:none,     s:none)
+call SetColor('Constant',       s:l_cyan,   s:none,     s:none)
+call SetColor('String',         s:l_green,  s:none,     s:none)
+call SetColor('Character',      s:l_green,  s:none,     s:none)
+call SetColor('Number',         s:d_yellow, s:none,     s:none) 
+call SetColor('Boolean',        s:d_yellow, s:none,     s:none)
+call SetColor('Float',          s:d_yellow, s:none,     s:none)
+
+" highlight Comment            ctermfg=gray
+" highlight Constant           ctermfg=l_cyan
+" highlight String             ctermfg=l_green
+" highlight Character          ctermfg=l_green
+" highlight Number             ctermfg=d_yellow
+" highlight Boolean            ctermfg=d_yellow
+" highlight Float              ctermfg=d_yellow
 highlight Identifier         ctermfg=l_red
 highlight Function           ctermfg=l_blue
 highlight Statement          ctermfg=l_purple
