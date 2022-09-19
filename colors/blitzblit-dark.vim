@@ -14,10 +14,10 @@ if exists("syntax_on")
 endif
 
 let colors_name = "blitzblit-dark"
-let s:black=0
-let s:d_red=1
-let s:d_green=2
-let s:d_yellow=3
+let s:black = 0
+let s:d_red = 1
+let s:d_green = 2
+let s:d_yellow = 3
 let s:d_blue=4
 let s:d_purple=5
 let s:d_cyan=6
@@ -31,16 +31,16 @@ let s:l_purple=13
 let s:l_cyan=14
 let s:white=15
 
-highlight Comment            ctermfg=s:gray
-highlight Constant           ctermfg=s:l_cyan
-highlight String             ctermfg=s:l_green
-highlight Character          ctermfg=s:l_green
-highlight Number             ctermfg=s:d_yellow
-highlight Boolean            ctermfg=s:d_yellow
-highlight Float              ctermfg=s:d_yellow
-highlight Identifier         ctermfg=s:l_red
-highlight Function           ctermfg=s:l_blue
-highlight Statement          ctermfg=s:l_purple
+highlight Comment            ctermfg=gray
+highlight Constant           ctermfg=l_cyan
+highlight String             ctermfg=l_green
+highlight Character          ctermfg=l_green
+highlight Number             ctermfg=d_yellow
+highlight Boolean            ctermfg=d_yellow
+highlight Float              ctermfg=d_yellow
+highlight Identifier         ctermfg=l_red
+highlight Function           ctermfg=l_blue
+highlight Statement          ctermfg=l_purple
  
 highlight Conditional        ctermfg=s:l_purple
 highlight Repeat             ctermfg=s:l_purple
