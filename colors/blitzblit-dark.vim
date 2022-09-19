@@ -31,7 +31,7 @@ let s:l_blue =     {'cterm': 12}
 let s:l_purple =   {'cterm': 13}
 let s:l_cyan =     {'cterm': 14}
 let s:white =      {'cterm': 15}
-let s:none =       {'cterm': NONE}
+let s:none =       {'cterm': 'NONE'}
 
 " ============================================================================== 
 " =   set colour function
