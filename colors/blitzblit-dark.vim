@@ -85,7 +85,7 @@ call SetColor('SpecialComment', s:gray,     s:none,     s:none)
 call SetColor('Debug',          s:none,     s:none,     s:none)
 
 call SetColor('Underlined',     s:none,     s:none,     s:underline)
-call SetColor('Error',          s:white,    s:red,      s:none)
+call SetColor('Error',          s:white,    s:l_red,      s:none)
 call SetColor('Todo',           s:l_purple, s:none,     s:none)
 call SetColor('Cursor',         s:black,    s:l_blue,   s:none)
 call SetColor('TermCursor',     s:none,     s:none,     s:reverse)
