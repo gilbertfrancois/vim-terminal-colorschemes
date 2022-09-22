@@ -66,19 +66,19 @@ call SetColor('Label',          s:l_purple, s:none,     s:none)
 call SetColor('Operator',       s:l_purple, s:none,     s:none)
 call SetColor('Keyword',        s:l_red,    s:none,     s:none)
 call SetColor('Exception',      s:l_purple, s:none,     s:none)
-call SetColor('PreProc',        s:l_yellow, s:none,     s:none)
+call SetColor('PreProc',        s:d_yellow, s:none,     s:none)
 call SetColor('Include',        s:l_blue,   s:none,     s:none)
 call SetColor('Define',         s:l_purple, s:none,     s:none)
 call SetColor('Macro',          s:l_purple, s:none,     s:none)
-call SetColor('PreCondit',      s:l_yellow, s:none,     s:none)
+call SetColor('PreCondit',      s:d_yellow, s:none,     s:none)
 
-call SetColor('Type',           s:l_yellow, s:none,     s:none)
-call SetColor('StorageClass',   s:l_yellow, s:none,     s:none)
-call SetColor('Structure',      s:l_yellow, s:none,     s:none)
-call SetColor('Typedef',        s:l_yellow, s:none,     s:none)
+call SetColor('Type',           s:d_yellow, s:none,     s:none)
+call SetColor('StorageClass',   s:d_yellow, s:none,     s:none)
+call SetColor('Structure',      s:d_yellow, s:none,     s:none)
+call SetColor('Typedef',        s:d_yellow, s:none,     s:none)
 
 call SetColor('Special',        s:l_blue,   s:none,     s:none)
-call SetColor('SpecialChar',    s:l_yellow, s:none,     s:none)
+call SetColor('SpecialChar',    s:d_yellow, s:none,     s:none)
 call SetColor('Tag',            s:none,     s:none,     s:none)
 call SetColor('Delimiter',      s:none,     s:none,     s:none)
 call SetColor('SpecialComment', s:gray,     s:none,     s:none)
@@ -199,6 +199,11 @@ call SetColor("xmlAttrib",                  s:d_yellow, s:none,     s:none)
 call SetColor("xmlEndTag",                  s:l_red,    s:none,     s:none)
 call SetColor("xmlTag",                     s:l_red,    s:none,     s:none)
 call SetColor("xmlTagName",                 s:l_red,    s:none,     s:none)
+
+
+
+
+
 " Must appear at the end of the file to work around this oddity:
 " https://groups.google.com/forum/#!msg/vim_dev/afPqwAFNdrU/nqh6tOM87QUJ
 set background=dark
