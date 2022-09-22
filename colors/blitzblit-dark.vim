@@ -205,7 +205,7 @@ call SetColor("htmlItalic", 			    s:l_purple, s:none,     s:none)
 call SetColor("htmlLink", 					s:l_cyan,   s:none,     s:none)
 call SetColor("htmlSpecialChar", 			s:l_yellow, s:none,     s:none)
 call SetColor("htmlSpecialTagName", 		s:l_red,    s:none,     s:none)
-call SetColor("htmlTag", 					s:white,    s:none,     s:none)
+hi link htmlTag                             Normal
 call SetColor("htmlTagN", 					s:l_red,    s:none,     s:none)
 call SetColor("htmlTagName", 			    s:l_red,    s:none,     s:none)
 hi link htmlTitle                           Normal
