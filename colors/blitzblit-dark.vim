@@ -169,9 +169,9 @@ call SetColor('DiagnosticUnderlineHint',    s:l_cyan,   s:none,     s:underline)
 
 
 " CSS
-hi link cssBraces           Normal
-hi link cssProp             Normal
-hi link cssInclude          Normal
+hi link cssBraces                           Normal
+hi link cssProp                             Normal
+hi link cssInclude                          Normal
 call SetColor("cssAttrComma",               s:l_purple, s:none,     s:none)
 call SetColor("cssAttributeSelector",       s:l_green,  s:none,     s:none)
 call SetColor("cssClassName",               s:d_yellow, s:none,     s:none)
@@ -189,6 +189,16 @@ call SetColor("cssSelectorOp",              s:l_purple, s:none,     s:none)
 call SetColor("cssSelectorOp2",             s:l_purple, s:none,     s:none)
 call SetColor("cssTagName",                 s:l_red,    s:none,     s:none)
 
+" TypeScript
+call SetColor("typescriptReserved",         s:l_purple, s:none,     s:none)
+hi link typescriptEndColons                 Normal
+hi link typescriptBraces                    Normal
+
+" XML
+call SetColor("xmlAttrib",                  s:d_yellow, s:none,     s:none)
+call SetColor("xmlEndTag",                  s:l_red,    s:none,     s:none)
+call SetColor("xmlTag",                     s:l_red,    s:none,     s:none)
+call SetColor("xmlTagName",                 s:l_red,    s:none,     s:none)
 " Must appear at the end of the file to work around this oddity:
 " https://groups.google.com/forum/#!msg/vim_dev/afPqwAFNdrU/nqh6tOM87QUJ
 set background=dark
