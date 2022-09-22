@@ -167,6 +167,28 @@ call SetColor('DiagnosticUnderlineWarn',    s:l_yellow, s:none,     s:underline)
 call SetColor('DiagnosticUnderlineInfo',    s:l_blue,   s:none,     s:underline)
 call SetColor('DiagnosticUnderlineHint',    s:l_cyan,   s:none,     s:underline)
 
+
+" CSS
+hi link cssBraces           Normal
+hi link cssProps            Normal
+hi link cssInclude          Normal
+call SetColor("cssAttrComma",               s:l_purple  s:none,     s:none)
+call SetColor("cssAttributeSelector",       s:l_green   s:none,     s:none)
+call SetColor("cssClassName",               s:l_yellow  s:none,     s:none)
+call SetColor("cssClassNameDot",            s:l_yellow  s:none,     s:none)
+call SetColor("cssDefinition",              s:l_purple  s:none,     s:none)
+call SetColor("cssFontAttr",                s:l_yellow  s:none,     s:none)
+call SetColor("cssFontDescriptor",          s:l_purple  s:none,     s:none)
+call SetColor("cssFunctionName",            s:l_blue    s:none,     s:none)
+call SetColor("cssIdentifier",              s:l_blue    s:none,     s:none)
+call SetColor("cssImportant",               s:l_purple  s:none,     s:none)
+call SetColor("cssIncludeKeyword",          s:l_purple  s:none,     s:none)
+call SetColor("cssMediaType",               s:l_yellow  s:none,     s:none)
+call SetColor("cssPseudoClassId",           s:l_yellow  s:none,     s:none)
+call SetColor("cssSelectorOp",              s:l_purple  s:none,     s:none)
+call SetColor("cssSelectorOp2",             s:l_purple  s:none,     s:none)
+call SetColor("cssTagName",                 s:l_red     s:none,     s:none)
+
 " Must appear at the end of the file to work around this oddity:
 " https://groups.google.com/forum/#!msg/vim_dev/afPqwAFNdrU/nqh6tOM87QUJ
 set background=dark
