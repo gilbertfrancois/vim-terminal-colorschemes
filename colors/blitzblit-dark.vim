@@ -189,6 +189,27 @@ call SetColor("cssSelectorOp",              s:l_purple, s:none,     s:none)
 call SetColor("cssSelectorOp2",             s:l_purple, s:none,     s:none)
 call SetColor("cssTagName",                 s:l_red,    s:none,     s:none)
 
+" HTML (keep consistent with Markdown, below)
+call SetColor("htmlArg", 					s:l_yellow, s:none,     s:none)
+call SetColor("htmlBold", 					s:l_yellow, s:none,     s:none)
+call SetColor("htmlBoldItalic", 			s:l_green,  s:none,     s:none)
+hi link htmlEndTag                          Normal
+hi link htmlEndTag                          Normal
+call SetColor("htmlH1", 					s:l_red,    s:none,     s:none)
+call SetColor("htmlH2", 					s:l_red,    s:none,     s:none)
+call SetColor("htmlH3", 					s:l_red,    s:none,     s:none)
+call SetColor("htmlH4", 					s:l_red,    s:none,     s:none)
+call SetColor("htmlH5", 					s:l_red,    s:none,     s:none)
+call SetColor("htmlH6", 					s:l_red,    s:none,     s:none)
+call SetColor("htmlItalic", 			    s:l_purple, s:none,     s:none)
+call SetColor("htmlLink", 					s:l_cyan,   s:none,     s:none)
+call SetColor("htmlSpecialChar", 			s:l_yellow, s:none,     s:none)
+call SetColor("htmlSpecialTagName", 		s:l_red,    s:none,     s:none)
+call SetColor("htmlTag", 					s:white,    s:none,     s:none)
+call SetColor("htmlTagN", 					s:l_red,    s:none,     s:none)
+call SetColor("htmlTagName", 			    s:l_red,    s:none,     s:none)
+hi link htmlTitle                           Normal
+
 " TypeScript
 call SetColor("typescriptReserved",         s:l_purple, s:none,     s:none)
 hi link typescriptEndColons                 Normal
