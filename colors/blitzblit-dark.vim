@@ -174,17 +174,17 @@ hi link cssProp                             Normal
 hi link cssInclude                          Normal
 call SetColor("cssAttrComma",               s:l_purple, s:none,     s:none)
 call SetColor("cssAttributeSelector",       s:l_green,  s:none,     s:none)
-call SetColor("cssClassName",               s:d_yellow, s:none,     s:none)
-call SetColor("cssClassNameDot",            s:d_yellow, s:none,     s:none)
+call SetColor("cssClassName",               s:l_yellow, s:none,     s:none)
+call SetColor("cssClassNameDot",            s:l_yellow, s:none,     s:none)
 call SetColor("cssDefinition",              s:l_purple, s:none,     s:none)
-call SetColor("cssFontAttr",                s:d_yellow, s:none,     s:none)
+call SetColor("cssFontAttr",                s:l_yellow, s:none,     s:none)
 call SetColor("cssFontDescriptor",          s:l_purple, s:none,     s:none)
 call SetColor("cssFunctionName",            s:l_blue,   s:none,     s:none)
 call SetColor("cssIdentifier",              s:l_blue,   s:none,     s:none)
 call SetColor("cssImportant",               s:l_purple, s:none,     s:none)
 call SetColor("cssIncludeKeyword",          s:l_purple, s:none,     s:none)
-call SetColor("cssMediaType",               s:d_yellow, s:none,     s:none)
-call SetColor("cssPseudoClassId",           s:d_yellow, s:none,     s:none)
+call SetColor("cssMediaType",               s:l_yellow, s:none,     s:none)
+call SetColor("cssPseudoClassId",           s:l_yellow, s:none,     s:none)
 call SetColor("cssSelectorOp",              s:l_purple, s:none,     s:none)
 call SetColor("cssSelectorOp2",             s:l_purple, s:none,     s:none)
 call SetColor("cssTagName",                 s:l_red,    s:none,     s:none)
@@ -195,7 +195,7 @@ hi link typescriptEndColons                 Normal
 hi link typescriptBraces                    Normal
 
 " XML
-call SetColor("xmlAttrib",                  s:d_yellow, s:none,     s:none)
+call SetColor("xmlAttrib",                  s:l_yellow, s:none,     s:none)
 call SetColor("xmlEndTag",                  s:l_red,    s:none,     s:none)
 call SetColor("xmlTag",                     s:l_red,    s:none,     s:none)
 call SetColor("xmlTagName",                 s:l_red,    s:none,     s:none)
