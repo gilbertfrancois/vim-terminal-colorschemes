@@ -170,7 +170,7 @@ call SetColor('DiagnosticUnderlineHint',    s:l_cyan,   s:none,     s:underline)
 
 " CSS
 hi link cssBraces           Normal
-hi link cssProps            Normal
+hi link cssProp             Normal
 hi link cssInclude          Normal
 call SetColor("cssAttrComma",               s:l_purple, s:none,     s:none)
 call SetColor("cssAttributeSelector",       s:l_green,  s:none,     s:none)
