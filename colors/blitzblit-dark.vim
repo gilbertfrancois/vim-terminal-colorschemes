@@ -1,5 +1,5 @@
-" Name:         blitzblit-dark
-" Description:  A modern VIM and NeoVIM colorscheme, inspired by onedark,
+" Name:         blitzblit-l
+" Description:  A modern VIM and NeoVIM colorscheme, inspired by onel,
 "               using only 16 cterm colors. It will match your terminal
 "               color profile.
 " Author:       Gilbert Francois Duivesteijn
@@ -13,7 +13,7 @@ if exists("syntax_on")
   syntax reset
 endif
 
-let colors_name = "blitzblit-dark"
+let colors_name = "blitzblit-l"
 
 let s:black =      {'cterm': 0}
 let s:d_red =      {'cterm': 1}
@@ -205,10 +205,68 @@ call SetColor("htmlItalic", 			    s:l_purple, s:none,     s:none)
 call SetColor("htmlLink", 					s:l_cyan,   s:none,     s:none)
 call SetColor("htmlSpecialChar", 			s:l_yellow, s:none,     s:none)
 call SetColor("htmlSpecialTagName", 		s:l_red,    s:none,     s:none)
-call SetColor("htmlTag", 					s:white,    s:none,     s:none)
+hi link htmlTag                             Normal
 call SetColor("htmlTagN", 					s:l_red,    s:none,     s:none)
 call SetColor("htmlTagName", 			    s:l_red,    s:none,     s:none)
 hi link htmlTitle                           Normal
+
+
+" JavaScript
+hi link javaScriptBraces Normal
+call SetColor("javaScriptFunction", s:l_purple, s:none, s:none)
+call SetColor("javaScriptIdentifier", s:l_purple, s:none, s:none)
+call SetColor("javaScriptNull", s:l_yellow, s:none, s:none)
+call SetColor("javaScriptNumber", s:l_yellow, s:none, s:none)
+call SetColor("javaScriptRequire", s:l_cyan, s:none, s:none)
+call SetColor("javaScriptReserved", s:l_purple, s:none, s:none)
+" https://github.com/pangloss/vim-javascript
+call SetColor("jsArrowFunction", s:l_purple, s:none, s:none)
+call SetColor("jsClassKeyword", s:l_purple, s:none, s:none)
+call SetColor("jsClassMethodType", s:l_purple, s:none, s:none)
+call SetColor("jsDocParam", s:l_blue, s:none, s:none)
+call SetColor("jsDocTags", s:l_purple, s:none, s:none)
+call SetColor("jsExport", s:l_purple, s:none, s:none)
+call SetColor("jsExportDefault", s:l_purple, s:none, s:none)
+call SetColor("jsExtendsKeyword", s:l_purple, s:none, s:none)
+call SetColor("jsFrom", s:l_purple, s:none, s:none)
+call SetColor("jsFuncCall", s:l_blue, s:none, s:none)
+call SetColor("jsFunction", s:l_purple, s:none, s:none)
+call SetColor("jsGenerator", s:l_yellow, s:none, s:none)
+call SetColor("jsGlobalObjects", s:l_yellow, s:none, s:none)
+call SetColor("jsImport", s:l_purple, s:none, s:none)
+call SetColor("jsModuleAs", s:l_purple, s:none, s:none)
+call SetColor("jsModuleWords", s:l_purple, s:none, s:none)
+call SetColor("jsModules", s:l_purple, s:none, s:none)
+call SetColor("jsNull", s:l_yellow, s:none, s:none)
+call SetColor("jsOperator", s:l_purple, s:none, s:none)
+call SetColor("jsStorageClass", s:l_purple, s:none, s:none)
+call SetColor("jsSuper", s:l_red, s:none, s:none)
+call SetColor("jsTemplateBraces", s:l_red, s:none, s:none)
+call SetColor("jsTemplateVar", s:l_green, s:none, s:none)
+call SetColor("jsThis", s:l_red, s:none, s:none)
+call SetColor("jsUndefined", s:l_yellow, s:none, s:none)
+" https://github.com/othree/yajs.vim
+call SetColor("javascriptArrowFunc", s:l_purple, s:none, s:none)
+call SetColor("javascriptClassExtends", s:l_purple, s:none, s:none)
+call SetColor("javascriptClassKeyword", s:l_purple, s:none, s:none)
+call SetColor("javascriptDocNotation", s:l_purple, s:none, s:none)
+call SetColor("javascriptDocParamName", s:l_blue, s:none, s:none)
+call SetColor("javascriptDocTags", s:l_purple, s:none, s:none)
+hi link javascriptEndColons Normal
+call SetColor("javascriptExport", s:l_purple, s:none, s:none)
+hi link javascriptFuncArg Normal
+call SetColor("javascriptFuncKeyword", s:l_purple, s:none, s:none)
+call SetColor("javascriptIdentifier", s:l_red, s:none, s:none)
+call SetColor("javascriptImport", s:l_purple, s:none, s:none)
+hi link javascriptMethodName Normal
+hi link javascriptObjectLabel Normal
+call SetColor("javascriptOpSymbol", s:l_cyan, s:none, s:none)
+call SetColor("javascriptOpSymbols", s:l_cyan, s:none, s:none)
+call SetColor("javascriptPropertyName", s:l_green, s:none, s:none)
+call SetColor("javascriptTemplateSB", s:l_red, s:none, s:none)
+call SetColor("javascriptVariable", s:l_purple, s:none, s:none)
+
+
 
 " TypeScript
 call SetColor("typescriptReserved",         s:l_purple, s:none,     s:none)
