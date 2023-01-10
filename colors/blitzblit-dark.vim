@@ -56,7 +56,7 @@ call SetColor('Number',         s:l_yellow, s:none,     s:none)
 call SetColor('Boolean',        s:l_yellow, s:none,     s:none)
 call SetColor('Float',          s:l_yellow, s:none,     s:none)
 
-call SetColor('Identifier',     s:l_red,    s:none,     s:none)
+call SetColor('Identifier',     s:silver,   s:none,     s:none)
 call SetColor('Function',       s:l_blue,   s:none,     s:none)
 
 call SetColor('Statement',      s:l_purple, s:none,     s:none)
