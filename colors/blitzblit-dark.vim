@@ -56,7 +56,7 @@ call SetColor('Number',         s:l_yellow, s:none,     s:none)
 call SetColor('Boolean',        s:l_yellow, s:none,     s:none)
 call SetColor('Float',          s:l_yellow, s:none,     s:none)
 
-call SetColor('Identifier',     s:gray,     s:none,     s:none)
+call SetColor('Identifier',     s:silver,   s:none,     s:none)
 call SetColor('Function',       s:l_blue,   s:none,     s:none)
 
 call SetColor('Statement',      s:l_purple, s:none,     s:none)
@@ -256,7 +256,7 @@ hi link javascriptEndColons Normal
 call SetColor("javascriptExport", s:l_purple, s:none, s:none)
 hi link javascriptFuncArg Normal
 call SetColor("javascriptFuncKeyword", s:l_purple, s:none, s:none)
-call SetColor("javascriptIdentifier", s:l_red, s:none, s:none)
+call SetColor("javascriptIdentifier", s:silver, s:none, s:none)
 call SetColor("javascriptImport", s:l_purple, s:none, s:none)
 hi link javascriptMethodName Normal
 hi link javascriptObjectLabel Normal
